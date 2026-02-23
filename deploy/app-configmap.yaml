@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: minishop
+data:
+  Redis__Host: "redis"
+  Redis__Port: "6379"
+  Logging__LogLevel__Default: "Information"

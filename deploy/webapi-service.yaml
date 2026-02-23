@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapi
+  namespace: minishop
+spec:
+  type: ClusterIP
+  selector:
+    app: webapi
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080

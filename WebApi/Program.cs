@@ -30,6 +30,9 @@ namespace WebApi
                                 return order is null ? Results.NotFound() : Results.Ok(order);
                         });
 
+                        app.MapGet("/health/live", () => Results.Ok("alive"));
+                        app.MapGet("/health/ready", () => Results.Ok("ready"));
+
                         app.Run();
                 }
         }
